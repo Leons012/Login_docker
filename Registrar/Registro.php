@@ -6,16 +6,9 @@ if(isset($_POST['Nombre'], $_POST['Apellido'], $_POST['CorreoElectronico'], $_PO
     $correoElectronico = $_POST['CorreoElectronico'];
     $contrasena = $_POST['Contrasena'];
     
-    // Validar que las contraseñas coincidan
-    //if($contrasena != $contrasenaRepetida) {
-    //   echo "Las contraseñas no coinciden.";
-    //exit; // Detener la ejecución del script si las contraseñas no coinciden
-    //}
-
-    // Realizar cualquier otra validación necesaria aquí
-
     // Conectar a la base de datos
-    $conexion = new mysqli('localhost', 'root', '', 'Usuario');
+    // $conexion = new mysqli('localhost', 'root', '', 'Usuario');
+    $conexion = new mysqli('db', 'root', '1234', 'Usuario');
 
     if($conexion->connect_error) {
         die("Error de conexión: " . $conexion->connect_error);

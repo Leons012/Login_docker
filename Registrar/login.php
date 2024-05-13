@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         // Realizar cualquier otra validación necesaria aquí
 
         // Conectar a la base de datos
-        $conexion = new mysqli('localhost', 'root', '', 'Usuario');
+        $conexion = new mysqli('db', 'root', '1234', 'Usuario');
 
         if($conexion->connect_error) {
             die("Error de conexión: " . $conexion->connect_error);
